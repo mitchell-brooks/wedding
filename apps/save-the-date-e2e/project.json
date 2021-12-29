@@ -1,0 +1,28 @@
+{
+  "root": "apps/save-the-date-e2e",
+  "sourceRoot": "apps/save-the-date-e2e/src",
+  "projectType": "application",
+  "targets": {
+    "e2e": {
+      "executor": "@nrwl/cypress:cypress",
+      "options": {
+        "cypressConfig": "apps/save-the-date-e2e/cypress.json",
+        "devServerTarget": "save-the-date:serve"
+      },
+      "configurations": {
+        "production": {
+          "devServerTarget": "save-the-date:serve:production"
+        }
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "outputs": ["{options.outputFile}"],
+      "options": {
+        "lintFilePatterns": ["apps/save-the-date-e2e/**/*.{js,ts}"]
+      }
+    }
+  },
+  "tags": [],
+  "implicitDependencies": ["save-the-date"]
+}

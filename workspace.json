@@ -1,0 +1,7 @@
+{
+  "version": 2,
+  "projects": {
+    "save-the-date": "apps/save-the-date",
+    "save-the-date-e2e": "apps/save-the-date-e2e"
+  }
+}
