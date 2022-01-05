@@ -37,6 +37,7 @@ specifiers:
   next: 12.0.7
   prettier: ^2.3.1
   react: 17.0.2
+  react-add-to-calendar-hoc: ^1.0.10
   react-dom: 17.0.2
   react-is: 17.0.2
   react-test-renderer: 17.0.2
@@ -51,6 +52,7 @@ dependencies:
   core-js: 3.20.1
   next: 12.0.7_react-dom@17.0.2+react@17.0.2
   react: 17.0.2
+  react-add-to-calendar-hoc: 1.0.10_react-dom@17.0.2+react@17.0.2
   react-dom: 17.0.2_react@17.0.2
   react-is: 17.0.2
   regenerator-runtime: 0.13.7
@@ -4851,6 +4853,12 @@ packages:
   /core-js-pure/3.20.1:
     resolution: {integrity: sha512-yeNNr3L9cEBwNy6vhhIJ0nko7fE7uFO6PgawcacGt2VWep4WqQx0RiqlkgSP7kqUMC1IKdfO9qPeWXcUheHLVQ==}
     requiresBuild: true
+
+  /core-js/2.6.12:
+    resolution: {integrity: sha512-Kb2wC0fvsWfQrgk8HU5lW6U/Lcs8+9aaYcy4ZFc6DDlo4nZ7n70dEgE5rtR0oG6ufKDUnrwfWL1mXR5ljDatrQ==}
+    deprecated: core-js@<3.4 is no longer maintained and not recommended for usage due to the number of issues. Because of the V8 engine whims, feature detection in old core-js versions could cause a slowdown up to 100x even if nothing is polyfilled. Please, upgrade your dependencies to the actual version of core-js.
+    requiresBuild: true
+    dev: false
 
   /core-js/3.20.1:
     resolution: {integrity: sha512-btdpStYFQScnNVQ5slVcr858KP0YWYjV16eGJQw8Gg7CWtu/2qNvIM3qVRIR3n1pK2R9NNOrTevbvAYxajwEjg==}
@@ -9814,6 +9822,18 @@ packages:
       loader-utils: 2.0.2
       schema-utils: 3.1.1
       webpack: 5.65.0
+
+  /react-add-to-calendar-hoc/1.0.10_react-dom@17.0.2+react@17.0.2:
+    resolution: {integrity: sha512-/tbI8Vez0LKAIPKi8g6KK1NdnUMig3lve5w7xdzkoACmniCrUtAG8d9veh9zF7HqEUO049S6IIREfMRxqiFKiQ==}
+    peerDependencies:
+      react: ^15.3.0 || ^16.2.0
+      react-dom: ^15.3.0 || ^16.2.0
+    dependencies:
+      core-js: 2.6.12
+      prop-types: 15.8.0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
 
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
