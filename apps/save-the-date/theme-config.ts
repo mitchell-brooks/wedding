@@ -1,4 +1,4 @@
-import styled, { createGlobalStyle } from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 /* eslint-disable-next-line */
 export interface GlobalStylesProps {}
