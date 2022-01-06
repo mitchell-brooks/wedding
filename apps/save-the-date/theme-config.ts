@@ -170,109 +170,33 @@ p, h1, h2, h3, h4, h5, h6 {
 #root, #__next {
   isolation: isolate;
 	height: 100%;
-}
+--shadow-color: 0deg 0% 0%;
+  --shadow-elevation-low:
+    -0.2px 1px 1.3px hsl(var(--shadow-color) / 0.08),
+    -0.4px 1.7px 2.1px -0.9px hsl(var(--shadow-color) / 0.1),
+    -0.9px 3.9px 4.9px -1.8px hsl(var(--shadow-color) / 0.12);
+  --shadow-elevation-medium:
+    -0.2px 1px 1.3px hsl(var(--shadow-color) / 0.08),
+    -0.8px 3.6px 4.5px -0.6px hsl(var(--shadow-color) / 0.1),
+    -1.9px 8.4px 10.6px -1.2px hsl(var(--shadow-color) / 0.11),
+    -4.5px 19.4px 24.5px -1.8px hsl(var(--shadow-color) / 0.13);
+  --shadow-elevation-high:
+    -0.2px 1px 1.3px hsl(var(--shadow-color) / 0.07),
+    -1.5px 6.3px 8px -0.2px hsl(var(--shadow-color) / 0.07),
+    -2.6px 11.3px 14.3px -0.4px hsl(var(--shadow-color) / 0.08),
+    -4px 17.1px 21.6px -0.7px hsl(var(--shadow-color) / 0.08),
+    -5.8px 24.9px 31.4px -0.9px hsl(var(--shadow-color) / 0.09),
+    -8.3px 35.9px 45.3px -1.1px hsl(var(--shadow-color) / 0.1),
+    -11.9px 51.1px 64.5px -1.3px hsl(var(--shadow-color) / 0.1),
+    -16.6px 71.7px 90.5px -1.6px hsl(var(--shadow-color) / 0.11),
+    -22.9px 98.9px 124.9px -1.8px hsl(var(--shadow-color) / 0.11);
+--grid-columns: 1fr 5fr 1fr;
+@media(min-width: 768px){
+--grid-columns: 1fr 3fr 1fr;
+};
+};
+
 main {
 height: 100%;
 }
-
-  html {
-    ${'' /* change this if implementing light/dark mode functionality */}
-    color: ${(props) => props.theme.color.primary};
-
-  }
-  
-  body {
-    font-family: ${(props) => props.theme.font.primary};
-  }
-
-  
-  h1 {
-    ${(props) => props.theme.font_size.xlarge};
-    font-family: ${(props) => props.theme.font.bold};
-    
-  }
-
-  h2 {
-    ${(props) => props.theme.font_size.larger};
-  }
-
-  h3 {
-    ${(props) => props.theme.font_size.larger};
-    font-family: ${(props) => props.theme.font.bold};
-  }
-
-  h4 {
-    ${(props) => props.theme.font_size.large};
-    font-family: ${(props) => props.theme.font.bold};
-  }
-
-  h5 {
-    ${(props) => props.theme.font_size.xsmall};
-    font-family: ${(props) => props.theme.font.normal};
-  }
-
-  p {
-    ${(props) => props.theme.font_size.small};
-    line-height: 22px;
-
-  }
-
-  input {
-    font-family: ${(props) => props.theme.font.normal};
-  }
-
-  @media (max-width: ${(props) => props.theme.screen.sm}) {
-    h1 {
-      ${(props) => props.theme.font_size.larger};
-    }
-
-    h2 {
-      ${(props) => props.theme.font_size.large};
-    }
-
-    h3 {
-      ${(props) => props.theme.font_size.regular};
-    }
-
-    p {
-      ${(props) => props.theme.font_size.small};
-    }
-  }
-
-  @media (max-width: ${(props) => props.theme.screen.xs}) {
-
-    h1 {
-
-    }
-
-    h2 {
-
-    }
-
-    h3 {
-      font-size: 32px;
-      line-height: 36px;
-    }
-
-    h4 {
-      font-size: 22px;
-      line-height: 24px;
-    }
-    p {
-
-    }
-
-    },  }
-
-  button {
-    border: none;
-    background: none;
-    outline: none;
-    padding: 0;
-    cursor: pointer;
-  }
-
-  a {
-    cursor: pointer;
-  }
 `;

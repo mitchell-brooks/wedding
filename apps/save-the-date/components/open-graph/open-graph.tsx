@@ -7,7 +7,6 @@ import path from 'path';
 export interface OpenGraphProps {}
 
 export function OpenGraph(props: OpenGraphProps) {
-  console.log('ogImage', ogImage);
   return (
     <>
       <meta
