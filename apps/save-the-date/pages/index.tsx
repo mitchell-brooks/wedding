@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import bgImg from '../assets/images/noses.jpg';
 import noisePattern from '../assets/images/noise-pattern';
-import shadowVars from '../styles/shadows';
 import AddToCalendarHOC from 'react-add-to-calendar-hoc';
 import { useEffect, useRef, useState } from 'react';
 

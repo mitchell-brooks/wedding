@@ -3,7 +3,7 @@ import Head from 'next/head';
 import '../assets/fonts/fonts.css';
 import { ThemeProvider } from 'styled-components';
 import React from 'react';
-import { GlobalStyles, theme } from '../theme-config';
+import { GlobalStyles } from '../theme-config';
 
 function CustomApp({ Component, pageProps }: AppProps) {
   return (
@@ -11,12 +11,10 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Emily & Mitchell - June 11th, 2022</title>
       </Head>
-      <ThemeProvider theme={theme}>
-        <main className="app">
-          <Component {...pageProps} />
-        </main>
-        <GlobalStyles />
-      </ThemeProvider>
+      <main className="app">
+        <Component {...pageProps} />
+      </main>
+      <GlobalStyles />
     </>
   );
 }
