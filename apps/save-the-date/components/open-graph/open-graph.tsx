@@ -30,6 +30,11 @@ export function OpenGraph(props: OpenGraphProps) {
       <meta property="og:image:type" content="image/jpeg" />
       <meta property="og:image:width" content="1200" />
       <meta property="og:image:height" content="630" />
+      <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+      />
+      <meta name="theme-color" content="hsla(102, 44%, 76%, .8)" />
     </>
   );
 }

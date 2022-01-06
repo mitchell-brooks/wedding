@@ -27,7 +27,23 @@ const Background = styled.div<{ bgImg: StaticImageData }>`
   z-index: -1;
   height: 100vh;
   width: 100%;
+  min-width: 100%;
+  min-height: 100%;
 `;
+
+const BackgroundColor = styled.div`
+  position: fixed;
+  min-width: 100%;
+  min-height: 100%;
+  background-position: center;
+  height: 100vh;
+  width: 120vw;
+  z-index: -2;
+  background-color: hsla(102, 44%, 76%, 0.8);
+  top: 0;
+  left: 0;
+`;
+
 const Grid = styled.div`
   display: grid;
   grid-template-columns: var(--grid-columns);
@@ -38,6 +54,7 @@ const NamesContainer = styled.article`
   display: flex;
   flex-direction: row;
   align-items: flex-start;
+  margin-top: 10px;
 `;
 
 const Names = styled.p`
@@ -177,12 +194,9 @@ const Dropdown = styled.div`
   & a:hover {
     text-decoration: underline;
   }
-  &a:after {
-    content: '_';
-  }
 `;
 
-const Spacer = () => <div></div>;
+const Spacer = () => <div>&nbsp;</div>;
 
 const City = styled.p`
   --font-size: 0.75rem;
@@ -200,15 +214,37 @@ const MoreDetails = styled.article`
   grid-template-columns: var(--grid-columns);
 `;
 
-const SiteLink = styled.p`
+const LinkIntro = styled.p`
+  --font-size: 0.75rem;
+  @media (min-width: 768px) {
+    --font-size: 1rem;
+  }
+  font-size: var(--font-size);
   margin-left: auto;
   margin-right: auto;
   text-align: center;
 `;
-const FormalInvitation = styled.p`
+
+const SiteLink = styled.p`
+  --font-size: 0.75rem;
+  @media (min-width: 768px) {
+    --font-size: 1rem;
+  }
+  font-size: var(--font-size);
   margin-left: auto;
   margin-right: auto;
-  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 20px;
+  margin-top: -10px;
+`;
+const FormalInvitation = styled.p`
+  --font-size: 0.75rem;
+  @media (min-width: 768px) {
+    --font-size: 1rem;
+  }
+  font-size: var(--font-size);
+  margin-left: auto;
+  margin-right: auto;
 `;
 
 export function Index() {
@@ -243,19 +279,21 @@ export function Index() {
 
   return (
     <>
-      <Background bgImg={bgImg}>
-        <Grid>
-          <Spacer />
-          <div>
-            <NamesContainer>
-              <Names>Emily & Mitchell</Names>
-            </NamesContainer>
-            <TopDateContainer>
-              <WeddingDate>June 11, 2022</WeddingDate>
-            </TopDateContainer>
-          </div>
-        </Grid>
-      </Background>
+      <BackgroundColor>
+        <Background bgImg={bgImg}>
+          <Grid>
+            <Spacer />
+            <div>
+              <NamesContainer>
+                <Names>Emily & Mitchell</Names>
+              </NamesContainer>
+              <TopDateContainer>
+                <WeddingDate>June 11, 2022</WeddingDate>
+              </TopDateContainer>
+            </div>
+          </Grid>
+        </Background>
+      </BackgroundColor>
       <LetterContainer>
         <Spacer />
         <Letter>
@@ -274,8 +312,10 @@ export function Index() {
           </MoreInfo>
           <MoreDetails>
             <Spacer />
+            <LinkIntro>Wedding details can be found at</LinkIntro>
+            <Spacer />
+            <Spacer />
             <SiteLink>
-              Wedding details can be found at <br />
               <Link href={`${WEDDING_SITE_PREFIX}${WEDDING_SITE}`}>
                 {WEDDING_SITE}
               </Link>
